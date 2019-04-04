@@ -8,7 +8,7 @@
 function [flux_x,flux_y]=...
 boundaryconditions_face(phi,u,v,flux_x,flux_y,A_uface,A_vface,xu,yu,xv,yv,ntime,boundaryregion,Qb,ub,vb,phi_b,type)
 
-global_pointers;
+global markuface markvface u_indices v_indices
 
 [Ni,Nj]=size(flux_x);
 Ni=Ni-1;

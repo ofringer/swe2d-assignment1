@@ -1,6 +1,6 @@
 function phi = boundaryconditions_cell(phi,xc,yc,ntime,boundaryregion,phi_b)
 
-global_pointers;
+global cellmark
 
 ntime0=ntime;
 for m=1:length(phi_b)

@@ -1,6 +1,6 @@
 function [u_vface,v_uface]=ufaces(u,v)
 
-global_pointers;
+global markuface markvface
 
 [Nip1,Nj]=size(u);
 Ni=Nip1-1;

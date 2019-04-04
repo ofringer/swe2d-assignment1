@@ -20,7 +20,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function y = fs2d(x)
   
-  global_pointers;
+  global aih bjh in_ij inu_ij in_im1j inu_ip1j in_ip1j inv_ij in_ijm1 ...
+      inv_ijp1 in_ijp1 cellmark outu_ij outv_ij outu_ip1j outv_ijp1
  
   [Ni,Nj]=size(x);
   y=x;

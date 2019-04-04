@@ -17,7 +17,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function [x,error] = cg2(L,b,x0,tol,nmax)
 
-  global_pointers;
+  global in_ij
+
   error = 0;
   x = x0;
   r = b-eval([L,'(x)']);

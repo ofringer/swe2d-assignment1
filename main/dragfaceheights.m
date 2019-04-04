@@ -1,6 +1,7 @@
 function [Hdragx,Hdragy]=dragfaceheights(H)
 
-global_pointers;
+global inu_ij in_im1j in_ij inv_ij in_ijm1 outu_ij out_im1j out_ij ...
+    outv_ij out_ijm1 outu_ip1j outv_ijp1
 
 [Ni,Nj]=size(H);
 Hdragx=zeros(Ni+1,Nj);

@@ -1,6 +1,7 @@
 function [Huwx,Huwy]=fluxfaceheights(H,d,h,u,v)
 
-global_pointers;
+global inu_ij in_ij in_im1j inv_ij in_ijm1 out_im1j out_ij out_ijm1 ...
+    outu_ij outv_ij outu_ip1j outv_ijp1
 
 [Ni,Nj]=size(H);
 Huwx=zeros(Ni+1,Nj);
