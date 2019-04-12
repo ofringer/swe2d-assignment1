@@ -141,15 +141,18 @@ for n=1:nsteps
 
   % Total water depth is independent of h if the problem is linear
   if(LINEAR)
-    H = d;
+    H = d + hoffset;
+
+    [Huwx,Huwy]=fluxfaceheights(H,d-zb,hoffset*ones(Ni,Nj),u,v);
   else
     H = d+h-zb; 
     
     % Correct for small depths (CWC problems?)
     H(H<H_small)=H_small;
+
+    [Huwx,Huwy]=fluxfaceheights(H,d-zb,h,u,v);
   end
   
-  [Huwx,Huwy]=fluxfaceheights(H,d-zb,h,u,v);
   [Hdragx,Hdragy]=dragfaceheights(H);
 
   % Provisional value of u for use in the drag term inside the domain
